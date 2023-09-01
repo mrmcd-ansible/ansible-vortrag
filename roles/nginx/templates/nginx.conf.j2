@@ -11,5 +11,10 @@ server{
 {% if public_ipv6 %}
   listen [::]:80;
 {% endif %}
+
+  location / {
+    charset utf-8;
+    try_files $uri $uri/ =404;
+  }
 }
 
