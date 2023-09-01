@@ -1,4 +1,10 @@
 ---
+- name: Install UFW Firewall
+  become: true
+  ansible.builtin.package:
+    name:
+      - 'ufw'
+
 - name: Allow ssh
   community.general.ufw:
     rule: allow
@@ -13,7 +19,7 @@
 
 - name: Allow https
   community.general.ufw:
-    rule: allow
+    rule: deny
     port: '443'
     proto: tcp
 
