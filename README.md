@@ -10,5 +10,5 @@ Es gibt eine Ansible Rolle, die eine Firewall einrichtet. Und es wird ein Webser
 
 Für den Produktiveinsatz des Codes aus diesem Projekt ist mehr zu tun, wie das verwenden einen Let's Encrypt Client für ein TLS Zertifikat und das einrichten eines Users, der zugriff auf das webdirectory bekommt. Aber als einfaches beispiel sollte das so genügen.
 
-## Lizens:
+## Lizenz:
 [![MIT License](.github/license.svg)](LICENSE)
