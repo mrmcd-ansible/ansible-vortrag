@@ -1,10 +1,17 @@
 ---
+- name: Update apt cache
+  become: true
+  ansible.builtin.apt:
+    cache_valid_time: 3600
+    update_cache: true
+  when:
+    - ansible_pkg_mgr == "apt"
+
 - name: Install UFW Firewall
   become: true
   ansible.builtin.package:
     name:
       - 'ufw'
-
 - name: Allow ssh
   become: true
   community.general.ufw:
