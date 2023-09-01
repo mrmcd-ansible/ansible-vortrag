@@ -1,0 +1,10 @@
+---
+ansible_host: webserver23.local
+name: webserver23
+domain: slides.example.org
+public_ipv6: true
+public_ipv4: true
+webdirectory: /var/www/
+aliases:
+  - vortrag.example.com
+  - mrmcd.example.com
