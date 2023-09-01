@@ -13,3 +13,19 @@
     owner: root
     group: root
     mode: '0644'
+
+- name: Copy nginx site-config
+  ansible.builtin.template:
+    src: "templates/nginx.conf.j2"
+    dest: "/etc/nginx/sites-available/nginx.conf"
+    owner: root
+    group: root
+    mode: '0644'
+
+- name: Link sites-available to sites-enable
+  ansible.builtin.file:
+    src: "/etc/nginx/sites-available/nginx.conf"
+    dest: "/etc/nginx/sites-enable/nginx.conf"
+    owner: root
+    group: root
+    state: link
