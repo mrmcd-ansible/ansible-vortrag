@@ -15,6 +15,7 @@
     mode: '0644'
 
 - name: Copy nginx site-config
+  become: true
   ansible.builtin.template:
     src: "templates/nginx.conf.j2"
     dest: "/etc/nginx/sites-available/nginx.conf"
@@ -23,6 +24,7 @@
     mode: '0644'
 
 - name: Link sites-available to sites-enable
+  become: true
   ansible.builtin.file:
     src: "/etc/nginx/sites-available/nginx.conf"
     dest: "/etc/nginx/sites-enabled/nginx.conf"

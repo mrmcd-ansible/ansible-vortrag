@@ -6,23 +6,27 @@
       - 'ufw'
 
 - name: Allow ssh
+  become: true
   community.general.ufw:
     rule: allow
     port: '22'
     proto: tcp
 
 - name: Allow http
+  become: true
   community.general.ufw:
     rule: allow
     port: '80'
     proto: tcp
 
 - name: Allow https
+  become: true
   community.general.ufw:
     rule: deny
     port: '443'
     proto: tcp
 
 - name: Enable ufw
+  become: true
   community.general.ufw:
     state: enabled
