@@ -19,7 +19,7 @@
     port: '80'
     proto: tcp
 
-- name: Allow https
+- name: deny https
   become: true
   community.general.ufw:
     rule: deny
