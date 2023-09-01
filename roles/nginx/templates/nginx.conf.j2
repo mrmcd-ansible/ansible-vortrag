@@ -1,7 +1,7 @@
 server{
   server_name: {{ domain }}
 {% for alias in aliases %}
-  {{ allias }}
+  {{ aliases }}
 {% endfor %};
   root {{ webdirectory }};
   index    index.html;

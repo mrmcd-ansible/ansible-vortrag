@@ -25,7 +25,7 @@
 - name: Link sites-available to sites-enable
   ansible.builtin.file:
     src: "/etc/nginx/sites-available/nginx.conf"
-    dest: "/etc/nginx/sites-enable/nginx.conf"
+    dest: "/etc/nginx/sites-enabled/nginx.conf"
     owner: root
     group: root
     state: link
