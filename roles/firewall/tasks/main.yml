@@ -1,3 +1,4 @@
+---
 - name: Allow ssh
   community.general.ufw:
     rule: allow
