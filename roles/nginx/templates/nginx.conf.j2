@@ -1,0 +1,15 @@
+server{
+  server_name: {{ domain }}
+{% for alias in aliases %}
+  {{ allias }}
+{% endfor %};
+  root {{ webdirectory }};
+  index    index.html;
+{% if public_ipv4 %}
+  listen 80;
+{% endif %}
+{% if public_ipv6 %}
+  listen [::]:80;
+{% endif %}
+}
+

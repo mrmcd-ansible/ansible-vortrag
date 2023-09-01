@@ -1,0 +1,6 @@
+---
+- name: Deploy Webserver
+  hosts: webserver
+  roles:
+    - {role: firewall, tags: noc}
+    - {role: nginx, tags: nginx}

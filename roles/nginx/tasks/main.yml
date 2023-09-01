@@ -1,11 +1,15 @@
-  - name: Install nginx Web Server
-    become: true
-    ansible.builtin.package:
-      name:
-        - 'nginx'
-  - name: Copy nginx config
-    become: true
-    ansible.builtin.copy:
-      src: "files/nginx.conf"
-      dest: "/etc/nginx/nginx.conf"
+---
+- name: Install nginx Web Server
+  become: true
+  ansible.builtin.package:
+    name:
+      - 'nginx'
 
+- name: Copy nginx config
+  become: true
+  ansible.builtin.copy:
+    src: "files/nginx.conf"
+    dest: "/etc/nginx/nginx.conf"
+    owner: root
+    group: root
+    mode: '0644'

@@ -1,5 +1,4 @@
 ---
-ansible_host: webserver42.local
 name: webserver42
 domain: slides.example.org
 public_ipv6: true
