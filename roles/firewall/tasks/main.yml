@@ -16,6 +16,6 @@
     port: '443'
     proto: tcp
 
-- name: ufw enable
+- name: Enable ufw
   community.general.ufw:
     state: enabled
